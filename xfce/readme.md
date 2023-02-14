@@ -1,7 +1,7 @@
 #### Build
 ```
 cd /tmp/docker/xfce
-build -t xfce .;
+docker build -t xfce .;
 ```
 
 #### Start
@@ -12,7 +12,5 @@ docker run --detach \
 --publish=5900:5900 \
 xfce;
 ```
-
-
 
 Source: [docker-ubuntu-xfce-vnc-desktop](https://github.com/welkineins/docker-ubuntu-xfce-vnc-desktop)

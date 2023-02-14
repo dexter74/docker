@@ -17,6 +17,7 @@ RUN apt update -y
 RUN apt install -y --no-install-recommends openbox tigervnc-standalone-server supervisor gosu
 RUN apt install -y --no-install-recommends lxterminal nano wget openssh-client rsync ca-certificates xdg-utils htop tar xzip gzip bzip2 zip unzip
 RUN apt install -y --no-install-recommends thunderbird
+RUN apt install -y --no-install-recommends plank
 RUN mkdir -p /usr/share/desktop-directories
 RUN rm -rf /var/lib/apt/lists
 

@@ -1,7 +1,17 @@
 ######################################################################################################
+# Compilation de easy-novnc #
+############################# 
+FROM golang:1.14-buster AS easy-novnc-build
+WORKDIR /src
+RUN go mod init build
+RUN go get github.com/geek1011/easy-novnc@v1.1.0
+RUN go build -o /bin/easy-novnc github.com/geek1011/easy-novnc
+
+
+######################################################################################################
 # Image système #
 #################
-FROM ubuntu
+FROM debian
 
 ######################################################################################################
 # Information #
@@ -28,6 +38,7 @@ RUN mkdir -p /var/run/sshd
 # Ajouts de fichier #
 #####################
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY --from=easy-novnc-build /bin/easy-novnc /usr/local/bin/
 
 ######################################################################################################
 # Exposition de port #

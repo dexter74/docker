@@ -27,15 +27,14 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt install -y openssh-server supervisor
 RUN apt install -y xfce4 xfce4-goodies x11vnc xvfb
-RUN apt autoclean && apt autoremove && rm -rf /var/lib/apt/lists/*
-
+RUN apt autoclean 
+RUN apt autoremove 
+RUN rm -rf /var/lib/apt/lists/*
 
 ##########################################################################################
 # Répertoire de Travail #
 #########################
 WORKDIR /root
-
-
 
 ##########################################################################################
 # Exposer ports #

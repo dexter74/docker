@@ -1,5 +1,6 @@
 #### Téléchargement
 ```
+clear;
 cd;
 rm -rf /tmp/docker;
 git clone https://github.com/dexter74/docker.git /tmp/docker;

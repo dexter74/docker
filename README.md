@@ -1,4 +1,4 @@
-#### Téléchargement
+#### A. Téléchargement du dépôt
 ```
 clear;
 cd;
@@ -6,10 +6,12 @@ rm -rf /tmp/docker;
 git clone https://github.com/dexter74/docker.git /tmp/docker;
 ```
 
-#### Applications des consignes pour les conteneurs
+#### Compilation de l'image et création du conteneur
 [Thunderbird-app](https://github.com/dexter74/docker/blob/main/thunderbird-app/readme.md)
 
 [Thunderbird-web](https://github.com/dexter74/docker/blob/main/thunderbird-web/readme.md)
+
+
 
 
 #### Thunderbird (Web, app)

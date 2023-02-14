@@ -27,4 +27,5 @@ docker stop mysupervisord
 #### D. Delete
 ```
 docker container rm -f supervisord;
+docker image rm mysupervisord ubuntu;
 ```

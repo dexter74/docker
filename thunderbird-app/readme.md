@@ -1,8 +1,19 @@
-#### Thunderbird-App
+#### A. Build
 ```
-cd docker/thunderbird
-docker build -t thunderbird .
-docker network create thunderbird-net
-docker volume create thunderbird-data
+docker build -t thunderbird .;
+```
+
+#### B. Create Network
+```
+docker network create thunderbird-net;
+```
+
+#### C. Create Volume
+```
+docker volume create thunderbird-data;
+```
+
+#### C. Run Container
+```
 docker run --detach --name=thunderbird-app --restart=always --volume=thunderbird-data:/data --net=thunderbird-net thunderbird;
 ```

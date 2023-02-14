@@ -14,7 +14,7 @@ MAINTAINER teste74@hotmail.fr
 RUN apt update
 RUN apt install -y openssh-server
 RUN apt install -y supervisor
-
+RUN apt install -y openbox
 
 ######################################################################################################
 # Création de Dossier #

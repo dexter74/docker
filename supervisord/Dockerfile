@@ -2,7 +2,7 @@
 # https://gdevillele.github.io/engine/admin/using_supervisord/ #
 ################################################################
 FROM ubuntu
-MAINTAINER teste74@♥hotmail.fr
+MAINTAINER teste74@hotmail.fr
 
 RUN apt update 
 RUN apt install -y apache2

@@ -10,6 +10,7 @@ docker build -t test .
 ```
 docker run --detach \
 --name=test \
+--hostname=test \
 --restart=always \
 --publish=80:80 \
 test;

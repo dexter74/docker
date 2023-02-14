@@ -4,8 +4,6 @@ cd /tmp/docker/test
 docker build -t test .
 ```
 
-
-
 #### B. Start
 ```
 docker run --detach \

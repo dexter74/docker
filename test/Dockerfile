@@ -27,6 +27,7 @@ RUN apt install -y x11vnc
 RUN apt install -y xvfb
 RUN apt install -y openbox
 RUN apt install -y openssh-server
+RUN apt install -y firefox
 
 ######################################################################################################
 # Création de Dossier #

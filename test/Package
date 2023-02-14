@@ -1,6 +1,11 @@
 apt-utils
+git
 locales
 sudo
+supervisor
+x11vnc
+xvfb
+
 
 gnome-panel
 gnome-terminal

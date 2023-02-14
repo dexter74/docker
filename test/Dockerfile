@@ -13,6 +13,6 @@ RUN mkdir -p /var/run/sshd
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-EXPOSE 22 80
+EXPOSE 22
 
 CMD ["/usr/bin/supervisord"]

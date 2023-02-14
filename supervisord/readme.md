@@ -11,7 +11,7 @@ docker container rm -f supervisord
 docker run --detach \
 --name=supervisord \
 --restart=always \
---publish=8080:80 \
+--publish=80:80 \
 mysupervisord
 ```
 #### C. Stop

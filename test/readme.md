@@ -9,23 +9,23 @@ docker build -t test .
 #### B. Start
 ```
 docker run --detach \
---name=CN_test \
+--name=test \
 --restart=always \
 --publish=80:80 \
 test;
 
-docker -it exec CN_test /bin/bash
+docker exec -it  test /bin/bash;
 ```
 
 
 #### C. Stop
 ```
-docker stop CN_test
+docker stop test
 ```
 
 
 #### D. Delete
 ```
-docker container rm -f CN_test;
+docker container rm -f test;
 docker image rm test ubuntu;
 ```

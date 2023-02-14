@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Ajouts de fichier #
 #####################
 ADD startup.sh ./
-ADD supervisord.conf /etc
+ADD supervisord.conf /root/supervisord.conf
 
 ##########################################################################################
 # Permission de lancement #

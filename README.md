@@ -11,6 +11,7 @@ git clone https://github.com/dexter74/docker.git /tmp/docker;
 
 [Thunderbird-web](https://github.com/dexter74/docker/blob/main/thunderbird-web/readme.md)
 
+[XFCE-desktop](https://github.com/dexter74/docker/blob/main/xfce/readme.md)
 
 
 

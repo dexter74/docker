@@ -22,7 +22,7 @@ RUN apt update -y
 RUN apt install -y --no-install-recommends bzip2 ca-certificates gzip htop lxterminal nano rsync tar unzip wget xdg-utils xzip zip
 RUN apt install -y --no-install-recommends gosu openssh-client
 RUN apt install -y --no-install-recommends tigervnc-standalone-server supervisor
-RUN apt install -y ligthdm lightdm-gtk-greeter xfce4
+# RUN apt install -y ligthdm lightdm-gtk-greeter xfce4
 RUN mkdir -p /usr/share/desktop-directories
 RUN rm -rf /var/lib/apt/lists
 

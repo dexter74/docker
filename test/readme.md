@@ -10,7 +10,7 @@ docker run --detach \
 --name=test \
 --hostname=test \
 --restart=always \
---publish=80:80 \
+--publish=80:8080 \
 test;
 
 docker exec -it  test /bin/bash;

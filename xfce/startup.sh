@@ -18,5 +18,5 @@ sed -ri "s/^Port\s+.*/Port 22/" /etc/ssh/sshd_config
 sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 
-/usr/bin/supervisord -c /root/supervisord.conf
+/usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
 /bin/bash

@@ -3,6 +3,11 @@ FROM ubuntu
 MAINTAINER teste74@hotmail.fr
 
 ######################################################################################################
+# Configuration Environnement #
+###############################
+ENV DEBIAN_FRONTEND noninteractive
+
+######################################################################################################
 RUN apt update
 RUN apt install -y openssh-server
 RUN apt install -y supervisor

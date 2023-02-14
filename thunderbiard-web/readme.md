@@ -6,6 +6,7 @@ docker build -t thunderbird-caddy .;
 #### Start (root:admin)
 ```
 PASSWORD=$(docker run --rm -it thunderbird-caddy caddy hash-password -plaintext 'admin')
+
 docker run --detach \
 --name=thunderbird-web \
 --restart=always \

@@ -1,0 +1,9 @@
+apt-utils
+locales
+sudo
+
+gnome-panel
+gnome-terminal
+gnome-settings-daemon
+metacity
+nautilus

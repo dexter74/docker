@@ -1,5 +1,6 @@
 #### A. Build
 ```
+clear;
 cd /tmp/docker/thunderbird-app;
 docker build -t thunderbird-app .;
 ```

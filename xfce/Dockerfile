@@ -13,6 +13,7 @@ RUN apt install -y xvfb
 
 ######################################################################################################
 RUN mkdir -p /var/run/sshd
+RUN mkdir -p /var/log/supervisor
 ######################################################################################################
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY startup.sh       /start.sh

@@ -19,22 +19,18 @@ thunderbird-caddy;
 
 #### Stop
 ```
-docker stop thunderbird-app;
 docker stop thunderbird-web;
 ```
 
 
 #### Delete Container
 ```
-docker container rm -f thunderbird-app
 docker container rm -f thunderbird-web
 ```
 
-#### Delete Volume, image
+#### Delete image and volume
 ```
-docker image  rm thunderbird-app;
 docker image  rm thunderbird-web;
-docker image  rm debian;
 docker volume rm thunderbird-data;
 ```
 
@@ -43,4 +39,3 @@ docker volume rm thunderbird-data;
 echo "y" | docker image prune;
 echo "y" | docker volume prune;
 ```
-

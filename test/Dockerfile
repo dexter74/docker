@@ -39,11 +39,12 @@ RUN mkdir -p /var/run/sshd
 #####################
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY --from=easy-novnc-build /bin/easy-novnc /usr/local/bin/
+COPY menu.xml /etc/xdg/openbox/
 
 ######################################################################################################
 # Exposition de port #
 ######################
-EXPOSE 22 80
+EXPOSE 22 80 8080
 
 ######################################################################################################
 # Commande de lancement #

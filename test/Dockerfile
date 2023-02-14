@@ -35,6 +35,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Utilisateur #
 ###############
 RUN useradd -d /home/marc -m marc -s /bin/bash
+RUN chown -R marc:users /var/log/
 
 USER marc
 

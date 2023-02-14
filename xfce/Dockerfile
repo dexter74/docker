@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Ajouts de fichier #
 #####################
 ADD startup.sh ./
-ADD supervisord.conf ./
+ADD supervisord.conf /etc
 
 ##########################################################################################
 # Permission de lancement #
@@ -47,4 +47,4 @@ EXPOSE 22
 ##########################################################################################
 # Commande de lancement #
 #########################
-ENTRYPOINT ["/startup.sh"]
+ENTRYPOINT ["./startup.sh"]

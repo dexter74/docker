@@ -28,7 +28,7 @@ docker stop thunderbird-web;
 
 #### Delete Container
 ```
-docker container rm -f thunderbird-web
+docker container rm -f thunderbird-web;
 ```
 
 #### Delete image and volume

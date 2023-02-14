@@ -16,7 +16,7 @@ RUN apt update -y
 # Utilitaires
 RUN apt install -y --no-install-recommends bzip2 ca-certificates gzip htop lxterminal nano rsync tar unzip wget xdg-utils xzip zip
 RUN apt install -y --no-install-recommends gosu openssh-client
-#RUN apt install -y --no-install-recommends tigervnc-standalone-server supervisor
+RUN apt install -y --no-install-recommends tigervnc-standalone-server supervisor
 
 # Interface
 #RUN apt install -y ligthdm lightdm-gtk-greeter

@@ -1,6 +1,7 @@
 #### A. Build
 ```
-docker build -t thunderbird .;
+cd /tmp/docker/thunderbird-app;
+docker build -t thunderbird-app .;
 ```
 
 #### B. Create Network
@@ -20,7 +21,7 @@ docker run --detach \
 --restart=always \
 --volume=thunderbird-data:/data \
 --net=thunderbird-net \
-thunderbird;
+thunderbird-app;
 ```
 
 #### D. Stop

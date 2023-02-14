@@ -1,5 +1,7 @@
 #### Build
 ```
+clear;
+cd /tmp/docker/thunderbird-web;
 docker build -t thunderbird-caddy .;
 ```
 

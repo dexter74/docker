@@ -3,9 +3,8 @@
 ####################
 FROM golang:1.14-buster AS easy-novnc-build
 WORKDIR /src
-RUN go mod init build
-RUN go get github.com/geek1011/easy-novnc@v1.1.0
-RUN go build -o /bin/easy-novnc github.com/geek1011/easy-novnc
+RUN go mod init build && go get github.com/geek1011/easy-novnc@v1.1.0 && go build -o /bin/easy-novnc github.com/geek1011/easy-novnc
+
 ###################################################################################################################################################
 # Build container #
 ###################
@@ -18,14 +17,17 @@ COPY --from=easy-novnc-build /bin/easy-novnc /usr/local/bin/
 COPY supervisord.conf /etc/
 
 # Packages
-RUN apt update -y
-RUN apt install -y --no-install-recommends bzip2 ca-certificates gzip htop lxterminal nano rsync tar unzip wget xdg-utils xzip zip
-RUN apt install -y --no-install-recommends gosu openssh-client
-RUN apt install -y --no-install-recommends tigervnc-standalone-server supervisor
-RUN apt install -y ligthdm
-# lightdm-gtk-greeter xfce4
-RUN mkdir -p /usr/share/desktop-directories
-RUN rm -rf /var/lib/apt/lists
+RUN apt update -y && \
+apt install -y --no-install-recommends \
+  bzip2 ca-certificates gzip htop lxterminal nano rsync tar unzip wget xdg-utils xzip zip \
+  gosu openssh-client \
+  tigervnc-standalone-server supervisor \
+  xfce4 && \
+  mkdir -p /usr/share/desktop-directories && \
+  rm -rf /var/lib/apt/lists
+
+
+# ligthdm lightdm-gtk-greeter
 
 # Création Utilisateur
 RUN groupadd --gid 1000 app &&  useradd --home-dir /data --shell /bin/bash --uid 1000 --gid 1000 app

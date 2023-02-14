@@ -13,11 +13,15 @@ RUN go build -o /bin/easy-novnc github.com/geek1011/easy-novnc
 FROM debian
 RUN apt update -y
 
-# Outils
-RUN apt install -y --no-install-recommends openbox tigervnc-standalone-server supervisor gosu
-RUN apt install -y --no-install-recommends lxterminal nano wget openssh-client rsync ca-certificates xdg-utils htop tar xzip gzip bzip2 zip unzip
-RUN apt install -y --no-install-recommends thunderbird
-RUN apt install -y --no-install-recommends plank
+# Utilitaires
+RUN apt install -y --no-install-recommends bzip2 ca-certificates gzip htop lxterminal nano rsync tar unzip wget xdg-utils xzip zip
+RUN apt install -y --no-install-recommends gosu openssh-client
+RUN apt install -y --no-install-recommends tigervnc-standalone-server supervisor
+
+# Interface
+RUN apt install -y ligthdm lightdm-gtk-greeter
+RUN apt install -y xfce4
+
 RUN mkdir -p /usr/share/desktop-directories
 RUN rm -rf /var/lib/apt/lists
 

@@ -1,3 +1,7 @@
+**ETAT**: KO
+
+<br />
+
 #### Build
 ```
 cd /tmp/docker/xfce

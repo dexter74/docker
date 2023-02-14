@@ -4,7 +4,7 @@
 FROM ubuntu
 MAINTAINER teste74@hotmail.fr
 
-RUN apt update 
+RUN apt update
 RUN apt install -y apache2
 RUN apt install -y openssh-server
 RUN apt install -y supervisor

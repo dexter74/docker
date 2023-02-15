@@ -26,8 +26,7 @@ COPY supervisord.conf /etc/
 #########
 # Dépôt #
 #########
-
-RUN sh -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/sources.list.d/debian.list'
+# RUN sh -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/sources.list.d/debian.list'
 
 ############
 # Packages #
@@ -35,8 +34,8 @@ RUN sh -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/s
 RUN apt update && apt update -y
 RUN apt install -y supervisor x11vnc xvfb
 RUN apt install -y apt-utils ca-certificates git gosu htop locales nano procps sudo
-#RUN apt install -y --no-install-recommends ubuntu-desktop
-#RUN apt install -y gnome-panel gnome-settings-daemon gnome-terminal metacity nautilus tmux
+RUN apt install -y --no-install-recommends ubuntu-desktop
+RUN apt install -y gnome-panel gnome-settings-daemon gnome-terminal metacity nautilus tmux
 
 ##########
 # Langue #

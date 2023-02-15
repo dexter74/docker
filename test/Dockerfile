@@ -13,7 +13,7 @@ FROM debian
 #################
 # Environnement #
 #################
-ARG user=serial
+ARG user=marc
 ENV USER=$user
 ENV DEBIAN_FRONTEND noninteractive
 

@@ -36,10 +36,10 @@ RUN sh -c 'echo "deb http://fr.archive.ubuntu.com/ubuntu jammy main universe" > 
 ############
 RUN apt update && apt update -y
 RUN apt install -y supervisor x11vnc xvfb
-RUN apt install -y apt-utils ca-certificates git gosu htop locales nano procps sudo
+RUN apt install -y apt-utils bash-completion ca-certificates git gosu htop locales nano procps sudo
 RUN apt install -y --no-install-recommends ubuntu-desktop
 RUN apt install -y gnome-panel gnome-settings-daemon gnome-terminal metacity nautilus tmux
-
+RUN apt install -y lightdm lightdm-gtk-greeter
 ##########
 # Langue #
 ##########

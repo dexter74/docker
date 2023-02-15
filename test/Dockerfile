@@ -31,7 +31,6 @@ COPY supervisord.conf /etc/
 # RUN sh -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/sources.list.d/debian.list'
 RUN sh -c 'echo "deb http://fr.archive.ubuntu.com/ubuntu jammy main universe" > /etc/apt/sources.list.d/ubuntu.list'
 
-
 ############
 # Packages #
 ############
@@ -82,5 +81,4 @@ EXPOSE 5900
 ##########################
 # Démarrage du conteneur #
 ##########################
-
 CMD    ["/usr/bin/supervisord"]

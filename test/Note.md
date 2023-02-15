@@ -11,8 +11,12 @@ COPY --from=easy-novnc-build /bin/easy-novnc /usr/local/bin/
 #### B. Packages
 ````
 apt-utils
+ca-certificates
 git
+gosu
+htop
 locales
+nano
 sudo
 supervisor
 x11vnc

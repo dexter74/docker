@@ -40,18 +40,18 @@ RUN apt install -y gnome-panel gnome-settings-daemon metacity nautilus gnome-ter
 #################
 # Environnement #
 #################
-ENV DISPLAY=:1 
-ENV TERM=xterm-256color
-ENV HOME=/home/$USER
+#ENV DISPLAY=:1 
+#ENV TERM=xterm-256color
+#ENV HOME=/home/$USER
 
 #########################
 # Groupe et Utilisateur #
 #########################
-RUN groupadd $USER
-RUN useradd --create-home --no-log-init -g $USER $USER
-RUN usermod -aG sudo $USER
-RUN echo "$USER:$USER" | chpasswd 
-RUN chsh -s /bin/bash $USER
+#RUN groupadd $USER
+#RUN useradd --create-home --no-log-init -g $USER $USER
+#RUN usermod -aG sudo $USER
+#RUN echo "$USER:$USER" | chpasswd 
+#RUN chsh -s /bin/bash $USER
 
 #####################
 # Ajouts de fichier #
@@ -64,6 +64,5 @@ RUN mkdir -p /var/log/supervisor
 ####################
 COPY files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-USER root
 EXPOSE 5900
 CMD    ["/usr/bin/supervisord"]

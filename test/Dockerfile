@@ -27,6 +27,8 @@ COPY supervisord.conf /etc/
 # Dépôt #
 #########
 # RUN sh -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/sources.list.d/debian.list'
+RUN sh -c 'echo "deb http://fr.archive.ubuntu.com/ubuntu jammy main universe" > /etc/apt/sources.list.d/ubuntu.list'
+
 
 ############
 # Packages #

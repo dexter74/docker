@@ -62,7 +62,7 @@ RUN mkdir -p /var/log/supervisor
 ####################
 # Copie de fichier #
 ####################
-COPY files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 5900
 CMD    ["/usr/bin/supervisord"]

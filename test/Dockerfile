@@ -59,7 +59,6 @@ RUN echo "root:admin"  | chpasswd
 RUN mkdir -p ./.config/nautilus
 RUN mkdir -p /var/log/supervisor
 
-
 ################
 # Port Exposer #
 ################
@@ -68,4 +67,4 @@ EXPOSE 5900
 ##########################
 # Démarrage du conteneur #
 ##########################
-CMD    ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord"]

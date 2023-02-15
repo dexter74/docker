@@ -49,9 +49,9 @@ RUN sed -i -e 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && loca
 #################
 # Environnement #
 #################
-#ENV DISPLAY=:1 
-#ENV TERM=xterm-256color
-#ENV HOME=/home/$USER
+ENV DISPLAY=:1 
+ENV TERM=xterm-256color
+ENV HOME=/home/$USER
 
 #########################
 # Groupe et Utilisateur #

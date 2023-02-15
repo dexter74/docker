@@ -6,14 +6,8 @@ docker build -t test .
 
 #### B. Start
 ```
-docker run --detach \
---name=test \
---hostname=test \
---restart=always \
---publish=80:8080 \
-test;
-
-docker exec -it  test /bin/bash;
+docker run --detach --name=test --hostname=test --restart=no --publish=80:8080 --publish=8080:5900 test;
+docker exec -it test /bin/bash;
 ```
 
 

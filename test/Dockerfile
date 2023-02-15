@@ -28,11 +28,12 @@ COPY supervisord.conf /etc/
 ############
 RUN apt update && apt update -y
 RUN apt install -y supervisor x11vnc xvfb
-#RUN apt install -y apt-utils ca-certificates git gosu htop locales nano sudo
-#RUN apt install -y --no-install-recommends ubuntu-desktop
-#RUN apt install -y gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal tmux
+RUN apt install -y apt-utils ca-certificates git gosu htop locales nano sudo
+RUN apt install -y --no-install-recommends ubuntu-desktop
+RUN apt install -y gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal tmux
 
 ##########
 # Langue #
 ##########
 # BUG: [Sed Requis] RUN echo "fr_FR.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
+

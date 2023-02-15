@@ -74,5 +74,13 @@ RUN mkdir -p /var/log/supervisor
 ####################
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+################
+# Port Exposer #
+################
 EXPOSE 5900
+
+##########################
+# Démarrage du conteneur #
+##########################
+
 CMD    ["/usr/bin/supervisord"]

@@ -47,11 +47,12 @@ RUN sed -i -e 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && loca
 #########################
 # Groupe et Utilisateur #
 #########################
-#RUN groupadd $USER
-#RUN useradd --create-home --no-log-init -g $USER $USER
-#RUN usermod -aG sudo $USER
-#RUN echo "$USER:$USER" | chpasswd 
-#RUN chsh -s /bin/bash $USER
+RUN groupadd $USER
+RUN useradd --create-home --no-log-init -g $USER $USER
+RUN usermod -aG sudo $USER
+RUN echo "$USER:$USER" | chpasswd 
+RUN echo "root:admin"  | chpasswd 
+RUN chsh -s /bin/bash $USER
 
 #####################
 # Ajouts de fichier #

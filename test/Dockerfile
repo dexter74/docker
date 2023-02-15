@@ -23,6 +23,12 @@ ENV DEBIAN_FRONTEND noninteractive
 COPY --from=easy-novnc-build /bin/easy-novnc /usr/local/bin/
 COPY supervisord.conf /etc/
 
+#########
+# Dépôt #
+#########
+
+RUN sh -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/sources.list.d/debian.list'
+
 ############
 # Packages #
 ############
